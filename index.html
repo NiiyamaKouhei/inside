@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="center">
+        <img class="logo" src="svg/logoJP.svg">
+
+        <div class="btn" id="1">
+            <div class="ellipse" id="click-left-1">
+                <p>幸せ</p>
+            </div>
+
+            <div class="center">
+                <div class="ellipse-small" id="CenterButton1">
+                    <p class="p-small">該当しない</p>
+                </div>
+            </div>
+
+            <div class="ellipse" id="click-right-1">
+                <p>悲しみ</p>
+            </div>
+        </div>
+        <!-- Startここから -->
+
+        <div class="video" id="Start">
+            <video class="Bigvideo" src="http://www.idd.tamabi.ac.jp/d22058/movie/kinect2.mp4" loop autoplay muted></video>
+        
+
+            <div class="center"id="StartButton">
+                <div class="ellipse-small-kinect" id="CenterButton-START">
+                    <p class="p-small-kinect">START</p>
+                </div>
+            </div>
+        </div>
+        <div class="video" id="ipad-1">
+            <h2>これからいくつかの質問に答えて<br>
+                あなたの感情をスクリーンに表現してみましょう。</h2>
+            <video src="http://www.idd.tamabi.ac.jp/d22058/movie/selection.mp4" loop autoplay muted></video>
+    
+            <div class="center" id="NextButton">
+                <div class="ellipse-small-kinect" id="CenterButton-ipad">
+                    <p class="p-small-kinect">次に進む</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn" id="2">
+            <div class="ellipse" id="click-left-2">
+                <p>警戒</p>
+            </div>
+
+            <div class="center">
+                <div class="ellipse-small" id="CenterButton2">
+                    <p class="p-small">該当しない</p>
+                </div>
+            </div>
+
+            <div class="ellipse" id="click-right-2">
+                <p>怒り</p>
+            </div>
+        </div>
+
+        <div class="btn" id="3">
+            <div class="ellipse" id="click-left-3">
+                <p>自信</p>
+            </div>
+
+            <div class="center">
+                <div class="ellipse-small" id="CenterButton3">
+                    <p class="p-small">該当しない</p>
+                </div>
+            </div>
+
+            <div class="ellipse" id="click-right-3">
+                <p>恐怖</p>
+            </div>
+        </div>
+
+        <div class="btn" id="4">
+            <div class="ellipse" id="click-left-4">
+                <p>驚き</p>
+            </div>
+
+            <div class="center">
+                <div class="ellipse-small" id="CenterButton4">
+                    <p class="p-small">該当しない</p>
+                </div>
+            </div>
+
+            <div class="ellipse" id="click-right-4">
+                <p>嫉妬</p>
+            </div>
+        </div>
+
+        <div class="video" id="kinect-1">
+            <h2>箱から1.5m程離れて<br>
+                あなたの感情を体の動きで表現してみましょう。</h2>
+            <video src="http://www.idd.tamabi.ac.jp/d22058//movie/kinect2.mp4" loop autoplay muted></video>
+
+            <div class="center">
+                <div class="ellipse-small-kinect" id="CenterButton-kinect">
+                    <p class="p-small-kinect">次に進む</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video" id="Last-1">
+            <image src="/img/kaisetu.jpg" loop autoplay muted></video>
+              
+                
+                <div class="center">
+                    <div class="ellipse-small-kinect" id="CenterButton-kaisetu">
+                        <p class="p-small-kinect">終わる</p>
+                    </div>
+                </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#2").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#Last-1").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#1").addClass("hide");
+                $("#ipad-1").addClass("hide");
+                $("#Start"), removeClass("hide");
+            });
+
+            //1page
+
+            $("#click-left-1").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#Last-1").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#2").removeClass("hide");
+            });
+
+            $("#click-right-1").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#2").removeClass("hide");
+
+            });
+
+            $("#CenterButton1").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#2").removeClass("hide");
+            });
+
+            //2page
+
+            $("#click-left-2").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#2").addClass("hide");
+                $("#4").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#3").removeClass("hide");
+            });
+
+            $("#click-right-2").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#2").addClass("hide");
+                $("#4").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#3").removeClass("hide");
+            });
+
+            $("#CenterButton2").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#2").addClass("hide");
+                $("#4").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#3").removeClass("hide");
+            });
+
+
+            //3page
+
+            $("#click-left-3").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#4").removeClass("hide");
+            });
+
+            $("#click-right-3").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#4").removeClass("hide");
+            });
+            $("#CenterButton3").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#4").removeClass("hide");
+            });
+
+            //4page
+
+            $("#click-left-4").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#kinect-1").removeClass("hide");
+            });
+
+            $("#click-right-4").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#kinect-1").removeClass("hide");
+            });
+            $("#CenterButton4").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#kinect-1").removeClass("hide");
+            });
+
+            //kinect-1
+            $("#CenterButton-kinect").bind("click", function () {
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#5").removeClass("hide");
+            });
+
+            //ipad-1
+            $("#CenterButton-ipad").bind("click", function () {
+                // $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#ipad-1").addClass("hide");
+                $("#1").removeClass("hide");
+
+                $("#Start").addClass("hide");
+            });
+
+            //STARTdisplay
+            $("#CenterButton-START").bind("click", function () {
+                // $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#Start").addClass("hide");
+                $("#ipad-1").removeClass("hide");
+            });
+
+            //Lastone
+            $("#CenterButton-kinect").bind("click", function () {
+                // $("#1").addClass("hide");
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#Start").addClass("hide");
+                $("#ipad-1").addClass("hide");
+                $("#Last-1").removeClass("hide");
+            });
+
+                //LastKaisetu
+                $("#CenterButton-kaisetu").bind("click", function () {
+                // $("#1").addClass("hide");
+                $("#1").addClass("hide");
+                $("#3").addClass("hide");
+                $("#4").addClass("hide");
+                $("#2").addClass("hide");
+                $("#kinect-1").addClass("hide");
+                $("#kinect-2").addClass("hide");
+                $("#Start").removeClass("hide");
+                $("#ipad-1").addClass("hide");
+                $("#Last-1").addClass("hide");
+            });
+
+            let socket = new WebSocket("wss://our-socket-serverss.herokuapp.com:443");
+
+
+            //Page1
+            document.getElementById("click-left-1").onclick = function () {
+                socket.send(JSON.stringify({ "happy": 1 }));
+                socket.send(JSON.stringify({ "happyM": 1 }));
+
+            };
+            document.getElementById("click-right-1").onclick = function () {
+                socket.send(JSON.stringify({ "sad": 1 }));
+                socket.send(JSON.stringify({ "sadM": 1 }));
+
+            };
+
+            //Page2
+            document.getElementById("click-left-2").onclick = function () {
+                socket.send(JSON.stringify({ "caution": 1 }));
+                socket.send(JSON.stringify({ "cautionM": 1 }));
+
+            };
+            document.getElementById("click-right-2").onclick = function () {
+                socket.send(JSON.stringify({ "angry": 1 }));
+                socket.send(JSON.stringify({ "angryM": 1 }));
+
+            };
+
+            //Page3
+            document.getElementById("click-left-3").onclick = function () {
+                socket.send(JSON.stringify({ "confidence": 1 }));
+                socket.send(JSON.stringify({ "confidenceM": 1 }));
+                
+
+            };
+            document.getElementById("click-right-3").onclick = function () {
+                socket.send(JSON.stringify({ "fear": 1 }));
+                socket.send(JSON.stringify({ "fearM": 1 }));
+
+            };
+
+            //Page4
+            document.getElementById("click-left-4").onclick = function () {
+                socket.send(JSON.stringify({ "surprise": 1 }));
+                socket.send(JSON.stringify({ "surpriseM": 1 }));
+
+            };
+            document.getElementById("click-right-4").onclick = function () {
+                socket.send(JSON.stringify({ "disgust": 1 }));
+                socket.send(JSON.stringify({ "disgustM": 1 }));
+
+            };
+            document.getElementById("CenterButton-START").onclick = function () {
+                socket.send(JSON.stringify({ "happy": 0 }));
+                socket.send(JSON.stringify({ "happyM": 0 }));
+                    socket.send(JSON.stringify({ "sad": 0 }));
+                    socket.send(JSON.stringify({ "sadM": 0 }));
+                    socket.send(JSON.stringify({ "caution": 0 }));
+                    socket.send(JSON.stringify({ "cautionM": 0 }));
+                    socket.send(JSON.stringify({ "angry": 0 }));
+                    socket.send(JSON.stringify({ "angryM": 0 }));
+                    socket.send(JSON.stringify({ "confidence": 0 }));
+                    socket.send(JSON.stringify({ "confidenceM": 0 }));
+                    socket.send(JSON.stringify({ "fear": 0 }));
+                    socket.send(JSON.stringify({ "fearM": 0 }));
+                    socket.send(JSON.stringify({ "surprise": 0 }));
+                    socket.send(JSON.stringify({ "surpriseM": 0 }));
+                    socket.send(JSON.stringify({ "disgust": 0 }));
+                    socket.send(JSON.stringify({ "disgustM": 0 }));
+            };
+
+            document.addEventListener('keypress', keypress_ivent);
+
+            function keypress_ivent(e) {
+                if (e.key === 'r' || e.key === 'R') {
+                    //Aキーが押された時の処理
+                    socket.send(JSON.stringify({ "happy": 0 }));
+                socket.send(JSON.stringify({ "happyM": 0 }));
+                    socket.send(JSON.stringify({ "sad": 0 }));
+                    socket.send(JSON.stringify({ "sadM": 0 }));
+                    socket.send(JSON.stringify({ "caution": 0 }));
+                    socket.send(JSON.stringify({ "cautionM": 0 }));
+                    socket.send(JSON.stringify({ "angry": 0 }));
+                    socket.send(JSON.stringify({ "angryM": 0 }));
+                    socket.send(JSON.stringify({ "confidence": 0 }));
+                    socket.send(JSON.stringify({ "confidenceM": 0 }));
+                    socket.send(JSON.stringify({ "fear": 0 }));
+                    socket.send(JSON.stringify({ "fearM": 0 }));
+                    socket.send(JSON.stringify({ "surprise": 0 }));
+                    socket.send(JSON.stringify({ "surpriseM": 0 }));
+                    socket.send(JSON.stringify({ "disgust": 0 }));
+                    socket.send(JSON.stringify({ "disgustM": 0 }));
+                }
+                return false;
+            }
+
+        </script>
+</body>
+
+</html>
