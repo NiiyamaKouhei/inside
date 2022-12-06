@@ -414,6 +414,12 @@
                 }
                 return false;
             }
+//             キネクトモードに移行するブロック↓
+            document.getElementById("CenterButton-kinect").onclick = function () {
+                socket.send(JSON.stringify({ "disgust": 1 }));
+                socket.send(JSON.stringify({ "disgustM": 1 }));
+
+            };
 
         </script>
 </body>
