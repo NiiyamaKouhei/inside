@@ -395,7 +395,7 @@
                 if (e.key === 'r' || e.key === 'R') {
                     //Aキーが押された時の処理
                     socket.send(JSON.stringify({ "happy": 0 }));
-                socket.send(JSON.stringify({ "happyM": 0 }));
+                    socket.send(JSON.stringify({ "happyM": 0 }));
                     socket.send(JSON.stringify({ "sad": 0 }));
                     socket.send(JSON.stringify({ "sadM": 0 }));
                     socket.send(JSON.stringify({ "caution": 0 }));
