@@ -108,7 +108,7 @@
 
             <div class="center">
                 <div class="ellipse-small-kinect" id="CenterButton-kinect">
-<!--                     ここを信号出せるように -->
+
                     <p class="p-small-kinect">次に進む</p>
                 </div>
             </div>
@@ -364,11 +364,21 @@
             document.getElementById("click-left-4").onclick = function () {
                 socket.send(JSON.stringify({ "surprise": 1 }));
                 socket.send(JSON.stringify({ "surpriseM": 1 }));
+//                 キネクトオンにする1
+                socket.send(JSON.stringify({ "KinectMode": 1 }));
 
             };
             document.getElementById("click-right-4").onclick = function () {
                 socket.send(JSON.stringify({ "disgust": 1 }));
                 socket.send(JSON.stringify({ "disgustM": 1 }));
+//                 キネクトオンにする2
+                socket.send(JSON.stringify({ "KinectMode": 1 }));
+
+            };
+            document.getElementById("CenterButton4").onclick = function () {
+//                 もっぱらキネクトオンにするよう
+                
+                socket.send(JSON.stringify({ "KinectMode": 1 }));
 
             };
             document.getElementById("CenterButton-START").onclick = function () {
@@ -414,12 +424,7 @@
                 }
                 return false;
             }
-//             キネクトモードに移行するブロック↓
-            document.getElementById("CenterButton-kinect").onclick = function () {
-                socket.send(JSON.stringify({ "KinectMode": 1 }));
-                
-
-            };
+          
 
         </script>
 </body>
