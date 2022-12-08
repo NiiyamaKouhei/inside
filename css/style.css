@@ -52,6 +52,9 @@ body {
     animation: fadeIn 3s ease 0s 1 normal;
     -webkit-animation: fadeIn 3s ease 0s 1 normal;
     text-align: center;
+    ustify-content: center;
+  align-items: center;
+    
 }
 
 p {
