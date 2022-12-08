@@ -412,7 +412,7 @@
 
             function keypress_ivent(e) {
                 if (e.key === 'r' || e.key === 'R') {
-                    //Aキーが押された時の処理
+                    //Rキーが押された時の処理
                     socket.send(JSON.stringify({ "happy": 0 }));
                     socket.send(JSON.stringify({ "happyM": 0 }));
                     socket.send(JSON.stringify({ "sad": 0 }));
