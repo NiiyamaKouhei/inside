@@ -384,13 +384,13 @@
                 socket.send(JSON.stringify({ "disgustM": 1 }));
 
                 socket.send(JSON.stringify({ "KinectMode": 1 }));
-
+                socket.send(JSON.stringify({ "KinectModeO": 1 }));
             };
             document.getElementById("CenterButton4").onclick = function () {
 
                 
                 socket.send(JSON.stringify({ "KinectMode": 1 }));
-
+                socket.send(JSON.stringify({ "KinectModeO": 1 }));
             };
             document.getElementById("CenterButton-START").onclick = function () {
                 socket.send(JSON.stringify({ "happy": 0 }));
