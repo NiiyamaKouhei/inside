@@ -134,7 +134,7 @@ h2{
 }
 
 video {
-    position: absolute;
+    position: relative;
     z-index: -2;
     height: 340px;
     margin: -32px;
