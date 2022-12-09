@@ -12,6 +12,8 @@ body {
     Meiryo,
     sans-serif;
 
+    margin: 0;
+
 
     animation: fadeIn 2s ease 0s 1 normal;
     -webkit-animation: fadeIn 2s ease 0s 1 normal;
@@ -157,14 +159,11 @@ video {
 
 .Bigvideo {
     position: absolute;
+    object-fit: cover;
     top: 0;
     left: 0;
-    width: 102%;
+    width: 103vw;
     height: 102vh;
-     transform: translate(-1%, 0%); 
-    /* min-width: 100%;
-    min-height: 100%; */
-   
    
     z-index: -4;
 }
