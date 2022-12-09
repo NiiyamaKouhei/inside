@@ -16,7 +16,7 @@
 
         <div class="btn" id="1">
             <div class="ellipse" id="click-left-1">
-                <video class="InButtonV" src="movie/Happpy.mp4" loop autoplay muted></video>
+                <video class="InButtonV" src="movie/Happy.mp4" loop autoplay muted></video>
                 <p>喜び</p>
             </div>
 
@@ -34,7 +34,7 @@
         <!-- Startここから -->
 
         <div class="start" id="Start">
-            <video class="Bigvideo" src="movie/Happpy.mp4" loop autoplay muted></video>
+            <video class="Bigvideo" src="movie/Happy.mp4" loop autoplay muted></video>
         
 
             <div class="center"id="StartButton">
@@ -57,10 +57,10 @@
 
         <div class="btn" id="2">
             <div class="ellipse" id="click-left-2">
-                <div class="InButtonV">
-                    <video class="" src="movie/Caution.mp4" loop autoplay muted></video>
-                </div>
-                <p>警戒</p>
+                
+                    <video class="InButtonV" src="movie/Feear.mp4" loop autoplay muted></video>
+                
+                <p>恐怖</p>
             </div>
 
             <div class="center">
@@ -88,8 +88,8 @@
             </div>
 
             <div class="ellipse" id="click-right-3">
-                <video class="InButtonV" src="movie/Anonimas.mp4" loop autoplay muted></video>
-                <p>恐怖</p>
+                <video class="InButtonV" src="movie/Disgust.mp4" loop autoplay muted></video>
+                <p>嫉妬</p>
             </div>
         </div>
 
@@ -106,8 +106,8 @@
             </div>
 
             <div class="ellipse" id="click-right-4">
-                <video class="InButtonV" src="movie/Disgust.mp4" loop autoplay muted></video>
-                <p>嫉妬</p>
+                <video class="InButtonV" src="movie/COution.mp4" loop autoplay muted></video>
+                <p>警戒</p>
             </div>
         </div>
 
@@ -331,6 +331,7 @@
             });
 
             let socket = new WebSocket("wss://our-socket-serverss.herokuapp.com:443");
+           
 
 
             //Page1
@@ -347,8 +348,9 @@
 
             //Page2
             document.getElementById("click-left-2").onclick = function () {
-                socket.send(JSON.stringify({ "caution": 1 }));
-                socket.send(JSON.stringify({ "cautionM": 1 }));
+                
+                socket.send(JSON.stringify({ "fear": 1 }));
+                socket.send(JSON.stringify({ "fearM": 1 }));
 
             };
             document.getElementById("click-right-2").onclick = function () {
@@ -365,8 +367,8 @@
 
             };
             document.getElementById("click-right-3").onclick = function () {
-                socket.send(JSON.stringify({ "fear": 1 }));
-                socket.send(JSON.stringify({ "fearM": 1 }));
+                socket.send(JSON.stringify({ "disgust": 1 }));
+                socket.send(JSON.stringify({ "disgustM": 1 }));
 
             };
 
@@ -380,8 +382,9 @@
 
             };
             document.getElementById("click-right-4").onclick = function () {
-                socket.send(JSON.stringify({ "disgust": 1 }));
-                socket.send(JSON.stringify({ "disgustM": 1 }));
+                socket.send(JSON.stringify({ "caution": 1 }));
+                socket.send(JSON.stringify({ "cautionM": 1 }));
+                
 
                 socket.send(JSON.stringify({ "KinectMode": 1 }));
                 socket.send(JSON.stringify({ "KinectModeO": 1 }));
