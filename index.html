@@ -34,7 +34,7 @@
         <!-- Startここから -->
 
         <div class="start" id="Start">
-            <video class="Bigvideo" src="movie/start.mp4" loop autoplay muted></video>
+            <video class="Bigvideo" id="movie2" src="movie/start.mp4" loop autoplay muted></video>
         
 
             <div class="center"id="StartButton">
@@ -146,11 +146,12 @@
                 $("#1").addClass("hide");
                 $("#ipad-1").addClass("hide");
                 $("#Start"), removeClass("hide");
-                
-                video = document.getElementByClass('Bigvideo');
-                video.playbackRate = 0.05; //速度調整
+            
           
             });
+
+            var vid = document.getElementById("movie2");
+            vid.playbackRate = .75;
 
             //1page
 
