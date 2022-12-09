@@ -162,9 +162,6 @@ video {
     left: 0;
     width: 102%;
     height: 102vh;
-     transform: translate(-1%, 0%); 
-    /* min-width: 100%;
-    min-height: 100%; */
    
    
     z-index: -4;
