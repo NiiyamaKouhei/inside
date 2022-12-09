@@ -157,11 +157,13 @@ video {
 
 .Bigvideo {
     position: absolute;
-    object-fit: fill;
     top: 0;
     left: 0;
-    width: 110%;
+    width: 102%;
     height: 102vh;
+     transform: translate(-1%, 0%); 
+    /* min-width: 100%;
+    min-height: 100%; */
    
    
     z-index: -4;
@@ -196,4 +198,3 @@ video {
     
     height: 500px;
 }
-
