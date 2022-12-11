@@ -382,7 +382,7 @@
                 socket.send(JSON.stringify({ "surprise": 1 }));
                 socket.send(JSON.stringify({ "surpriseM": 1 }));
                 
-                window.setTimeout(dispMsg, 400);
+                window.setTimeout(dispMsg, 800);
 
                
 
@@ -391,7 +391,7 @@
                 socket.send(JSON.stringify({ "caution": 1 }));
                 socket.send(JSON.stringify({ "cautionM": 1 }));
                 
-                 window.setTimeout(dispMsg, 400);
+                 window.setTimeout(dispMsg, 800);
                 
 
                 
@@ -399,7 +399,7 @@
           document.getElementById("CenterButton4").onclick = function () {
 
                 
-                 window.setTimeout(dispMsg, 400);
+                 window.setTimeout(dispMsg, 800);
            };
             
             function dispMsg(){
@@ -408,6 +408,12 @@
                 socket.send(JSON.stringify({ "KinectMode": 1 }));
                 socket.send(JSON.stringify({ "KinectModeO": 1 }));
             }
+            document.getElementById("CenterButton-kinect").onclick = function () {
+
+                
+                socket.send(JSON.stringify({ "KinectMode": 1 }));
+                socket.send(JSON.stringify({ "KinectModeO": 1 }));
+           };
             document.getElementById("CenterButton-START").onclick = function () {
                 socket.send(JSON.stringify({ "happy": 0 }));
                 socket.send(JSON.stringify({ "happyM": 0 }));
