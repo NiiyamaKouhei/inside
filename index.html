@@ -400,6 +400,12 @@
                 socket.send(JSON.stringify({ "KinectMode": 1 }));
                 socket.send(JSON.stringify({ "KinectModeO": 1 }));
             };
+             document.getElementById("CenterButton-kinect").onclick = function () {
+
+                
+                socket.send(JSON.stringify({ "KinectMode": 1 }));
+                socket.send(JSON.stringify({ "KinectModeO": 1 }));
+            };
             document.getElementById("CenterButton-START").onclick = function () {
                 socket.send(JSON.stringify({ "happy": 0 }));
                 socket.send(JSON.stringify({ "happyM": 0 }));
