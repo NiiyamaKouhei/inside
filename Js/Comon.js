@@ -1,4 +1,4 @@
-let socket = new WebSocket("wss://our-socket-servers.herokuapp.com:443");
+let socket = new WebSocket("wss://our-server-gouki-b0b00dec60cf.herokuapp.com:443");
 
 
 //Page1
